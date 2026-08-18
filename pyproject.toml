@@ -1,0 +1,20 @@
+[project]
+name = "ui-tests"
+version = "0.1.0"
+description = "Playwright UI tests"
+authors = [
+    {name = "Barbaron86",email = "kirill.molodykh@mail.ru"}
+]
+requires-python = ">=3.12"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.16.3,<0.17.0)"
+]
