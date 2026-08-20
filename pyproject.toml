@@ -3,10 +3,11 @@ name = "ui-tests"
 version = "0.1.0"
 description = "Playwright UI tests"
 authors = [
-    {name = "Barbaron86",email = "kirill.molodykh@mail.ru"}
+    { name = "Barbaron86", email = "kirill.molodykh@mail.ru" }
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "pytest-playwright (>=0.9.0,<0.10.0)"
 ]
 
 
@@ -18,3 +19,24 @@ build-backend = "poetry.core.masonry.api"
 dev = [
     "ruff (>=0.16.3,<0.17.0)"
 ]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E", # Ошибки PEP8
+    "W", # Предупреждения PEP8
+    "F", # Критические ошибки и баги (undefined names)
+    "I", # Автосортировка импортов (isort)
+    "UP", # Обновление синтаксиса под Python 3.12
+]
+ignore = [
+    "E501", # Игнорировать длину строки (для длинных селекторов Playwright)
+    "PT004", # Разрешить фикстуры без return
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
