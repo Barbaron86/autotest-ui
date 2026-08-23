@@ -13,4 +13,4 @@ def test_assert_positive_case():
 
 
 def test_assert_negative_case():
-    assert 1 == 2
+    assert 1 == 2  # type: ignore[comparison-overlap]

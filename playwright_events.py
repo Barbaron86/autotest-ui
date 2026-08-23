@@ -1,11 +1,11 @@
 from playwright.sync_api import Request, Response, sync_playwright
 
 
-def log_request(request: Request):
+def log_request(request: Request) -> None:
     print(f"Request: {request.url}")
 
 
-def log_response(response: Response):
+def log_response(response: Response) -> None:
     print(f"Response: {response.url}, status: {response.status}")
 
 
