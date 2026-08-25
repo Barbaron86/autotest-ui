@@ -79,7 +79,11 @@ show_error_codes = true
 
 # Специальные правила для папки с тестами
 [[tool.mypy.overrides]]
-module = "tests.*"
+module = [
+    "tests.*",
+    "fixtures.*"
+]
+
 # Ослабляем требования к типизации функций в тестах, чтобы не писать "-> None" и не типизировать фикстуры принудительно
 disallow_untyped_defs = false
 disallow_incomplete_defs = false
