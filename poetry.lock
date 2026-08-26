@@ -793,6 +793,22 @@ pytest-base-url = ">=1.0.0,<3.0.0"
 python-slugify = ">=6.0.0,<9.0.0"
 
 [[package]]
+name = "pytest-rerunfailures"
+version = "16.6"
+description = "pytest plugin to re-run tests to eliminate flaky failures"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "pytest_rerunfailures-16.6-py3-none-any.whl", hash = "sha256:6af2d1ebd6e5cb79666ac408942cd6a0672a49fefd8523664770718560795e13"},
+    {file = "pytest_rerunfailures-16.6.tar.gz", hash = "sha256:29dbfee46f542073c888e0ed4e81c51e15b9096f49a299eb1a759629c601684a"},
+]
+
+[package.dependencies]
+packaging = ">=17.1"
+pytest = ">=8.2,<8.2.2 || >8.2.2"
+
+[[package]]
 name = "python-slugify"
 version = "8.0.4"
 description = "A Python slugify application that also handles Unicode"
@@ -905,4 +921,4 @@ zstd = ["backports-zstd (>=1.0.0) ; python_version < \"3.14\""]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "48fcbaa1fd76643de68f1dd6bfeae137f276e975db9048fbff4bc1913b3fcd11"
+content-hash = "befe8460ee7c78374109a8a098ec6cf04a28c70393cfcc39707a5bb4ee36ccc5"
