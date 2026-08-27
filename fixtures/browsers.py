@@ -6,7 +6,8 @@ from playwright.sync_api import Page, Playwright
 
 @pytest.fixture()
 def chromium_page(playwright: Playwright) -> Iterator[Page]:
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=False, slow_mo=1000)
+
     yield browser.new_page()
     browser.close()
 
