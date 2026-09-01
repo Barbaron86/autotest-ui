@@ -1,24 +1,25 @@
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
 
 from components.base_component import BaseComponent
+from elements.button import Button
 
 
 class CourseViewMenuComponent(BaseComponent):
     def __init__(self, page: Page):
         super().__init__(page)
 
-        self.menu_button = self.page.get_by_test_id("course-view-menu-button")
-        self.edit_menu_button = self.page.get_by_test_id("course-view-edit-menu-button")
-        self.delete_menu_button = self.page.get_by_test_id("course-view-delete-menu-button")
+        self.menu_button = Button(page, "course-view-menu-button", "Menu")
+        self.edit_menu_button = Button(page, "course-view-edit-menu-button", "Edit")
+        self.delete_menu_button = Button(page, "course-view-delete-menu-button", "Delete")
 
     def click_edit(self, index: int) -> None:
-        self.menu_button.nth(int(index)).click()
+        self.menu_button.click(nth=index)
 
-        expect(self.edit_menu_button.nth(int(index))).to_be_visible()
-        self.edit_menu_button.nth(int(index)).click()
+        self.edit_menu_button.check_visible(nth=index)
+        self.edit_menu_button.click(nth=index)
 
     def click_delete(self, index: int) -> None:
-        self.menu_button.nth(int(index)).click()
+        self.menu_button.click(nth=index)
 
-        expect(self.delete_menu_button.nth(int(index))).to_be_visible()
-        self.delete_menu_button.nth(int(index)).click()
+        self.delete_menu_button.check_visible(nth=index)
+        self.delete_menu_button.click(nth=index)
