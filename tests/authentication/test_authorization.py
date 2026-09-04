@@ -17,6 +17,9 @@ from tools.allure.tags import AllureTag
 @allure.epic(AllureEpic.LMS)
 @allure.feature(AllureFeature.AUTHENTICATION)
 @allure.story(AllureStories.AUTHORIZATION)
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeature.AUTHENTICATION)
+@allure.sub_suite(AllureStories.AUTHORIZATION)
 class TestClassAuthorization:
     @pytest.mark.parametrize(
         "email, password", [("user.name@gmail.com", "password"), ("user.name@gmail.com", "  "), ("  ", "password")]
