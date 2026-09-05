@@ -1,18 +1,25 @@
 import re
 from collections.abc import Iterator
 
+import allure
 import pytest
 from playwright.sync_api import Page, Playwright
+from pytest import FixtureRequest
 
 from pages.authentication.registration_page import RegistrationPage
 
 
 @pytest.fixture()
-def chromium_page(playwright: Playwright) -> Iterator[Page]:
+def chromium_page(request: FixtureRequest, playwright: Playwright) -> Iterator[Page]:
     browser = playwright.chromium.launch(headless=False)
-
-    yield browser.new_page()
+    context = browser.new_context()
+    context.tracing.start(name="trace", screenshots=True, snapshots=True, sources=True, title=request.node.name)
+    yield context.new_page()
+    context.tracing.stop(path=f"./tracing/{request.node.name}.zip")
+    context.close()
     browser.close()
+
+    allure.attach.file(source=f"./tracing/{request.node.name}.zip", name=f"trace-{request.node.name}.zip")
 
 
 @pytest.fixture(scope="session")
@@ -35,14 +42,19 @@ def initialize_browser_state(playwright: Playwright):
 
 @pytest.fixture()
 def chromium_page_with_state(
+    request: FixtureRequest,
     initialize_browser_state,
     playwright: Playwright,
 ):
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context(storage_state="browser-state.json")
+    context.tracing.start(name="trace", screenshots=True, snapshots=True, sources=True, title=request.node.name)
     page = context.new_page()
 
     yield page
 
+    context.tracing.stop(path=f"./tracing/{request.node.name}.zip")
     context.close()
     browser.close()
+
+    allure.attach.file(source=f"./tracing/{request.node.name}.zip", name=f"trace-{request.node.name}")
