@@ -11,7 +11,9 @@ def initialize_playwright_page(
     playwright: Playwright, test_name: str, storage_state: Path | None = None
 ) -> Iterator[Page]:
     browser = playwright.chromium.launch(headless=settings.headless)
-    context = browser.new_context(storage_state=storage_state, record_video_dir=settings.videos_dir)
+    context = browser.new_context(
+        base_url=settings.get_base_url(), storage_state=storage_state, record_video_dir=settings.videos_dir
+    )
     context.tracing.start(name="trace", screenshots=True, snapshots=True, sources=True, title=test_name)
     page = context.new_page()
 
