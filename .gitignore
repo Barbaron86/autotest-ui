@@ -10,3 +10,6 @@ __pycache__/
 allure-results/
 allure-report/
 tracing
+videos
+.env
+/browser_state.json
