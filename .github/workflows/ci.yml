@@ -1,0 +1,107 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.12"
+  POETRY_VERSION: "2.4.3"
+
+jobs:
+  quality:
+    name: Ruff and mypy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Poetry
+        run: pipx install poetry==${{ env.POETRY_VERSION }}
+
+      - name: Install project dependencies
+        run: poetry install --no-interaction --no-root
+
+      - name: Check formatting with Ruff
+        run: poetry run ruff format --check .
+
+      - name: Run Ruff linter
+        run: poetry run ruff check --output-format=github .
+
+      - name: Run mypy
+        run: poetry run mypy .
+
+  ui-tests:
+    name: Playwright regression tests
+    needs:
+      - quality
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      HEADLESS: "true"
+      BROWSERS: '["chromium"]'
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Poetry
+        run: pipx install poetry==${{ env.POETRY_VERSION }}
+
+      - name: Install project dependencies
+        run: poetry install --no-interaction --no-root
+
+      - name: Create environment file
+        run: cp .env.example .env
+
+      - name: Install Chromium and system dependencies
+        run: poetry run python -m playwright install --with-deps chromium
+
+      - name: Run regression UI tests
+        run: >
+          poetry run pytest
+          tests/authentication
+          tests/courses
+          tests/dashboard
+          -m regression
+          --alluredir=allure-results
+
+      - name: Upload test artifacts
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: ui-test-artifacts-${{ github.run_attempt }}
+          path: |
+            allure-results
+            tracing
+            videos
+          if-no-files-found: warn
+          retention-days: 14

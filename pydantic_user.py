@@ -11,10 +11,10 @@ class User(BaseModel):
 user_data = {"id": 1, "username": "user", "email": "test@gmail.com", "is_active": True}
 invalid_user_data = {"id": "one", "username": "user", "email": "test@mail.com", "is_active": "true"}
 
-user = User(**user_data)  # type: ignore[arg-type]
+user = User(**user_data)
 print(user)
 print(user.is_active)
 try:
-    invalid_user = User(**invalid_user_data)  # type: ignore[arg-type]
+    invalid_user = User(**invalid_user_data)
 except Exception as error:
     print("Ошибка валидации", error)

@@ -39,13 +39,13 @@ select = [
 ]
 ignore = [
     "E501", # Игнорировать длину строки (для длинных селекторов Playwright)
-    "PT004", # Разрешить фикстуры без return
     "W292", # Игнорировать отсутствие новой строки в конце файла
 ]
 
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
+line-ending = "lf"
 
 [tool.pytest.ini_options]
 addopts = "-s -v"

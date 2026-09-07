@@ -22,7 +22,7 @@ product_data = {
     "market": {"name": "Market 1", "id": 1},
 }
 
-product = Product(**product_data)  # type: ignore[arg-type]
+product = Product(**product_data)
 print(product)
 
 new_product = Product(
