@@ -136,10 +136,12 @@ jobs:
         run: |
           rm -rf gh-pages/.git
           mkdir -p gh-pages
-
+          
           if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
             rm -rf "gh-pages/${{ steps.report.outputs.subfolder }}"
           fi
+          
+          echo '<meta http-equiv="refresh" content="0; url=./main/">' > gh-pages/index.html
 
       - name: Generate Allure report
         id: allure_report
@@ -162,29 +164,6 @@ jobs:
           report_name: ${{ steps.report.outputs.name }}
           keep_reports: 100
 
-      - name: Create Pages root redirect
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && steps.allure_report.outcome == 'success'
-          }}
-        shell: bash
-        run: |
-          cat > allure-history/index.html <<'EOF'
-          <!doctype html>
-          <html lang="en">
-            <head>
-              <meta charset="utf-8">
-              <meta http-equiv="refresh" content="0; url=./main/">
-              <link rel="canonical" href="./main/">
-              <title>Allure Report</title>
-            </head>
-            <body>
-              <p><a href="./main/">Open the latest main Allure report</a></p>
-            </body>
-          </html>
-          EOF
 
       - name: Publish Allure report to GitHub Pages
         id: publish_report
