@@ -9,8 +9,6 @@ on:
     branches:
       - main
 
-  workflow_dispatch:
-
 permissions:
   contents: write
 
@@ -67,12 +65,9 @@ jobs:
           if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
             echo "subfolder=pr-${{ github.event.pull_request.number }}" >> "$GITHUB_OUTPUT"
             echo "name=UI tests PR #${{ github.event.pull_request.number }}" >> "$GITHUB_OUTPUT"
-          elif [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
+          else
             echo "subfolder=main" >> "$GITHUB_OUTPUT"
             echo "name=UI tests main" >> "$GITHUB_OUTPUT"
-          else
-            echo "subfolder=manual" >> "$GITHUB_OUTPUT"
-            echo "name=UI tests manual run" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Check formatting with Ruff
@@ -124,6 +119,25 @@ jobs:
           ref: gh-pages
           path: gh-pages
           persist-credentials: false
+
+      - name: Prepare Allure history
+        if: >-
+          ${{
+            always()
+            && !cancelled()
+            && (
+              steps.ui_tests.outcome == 'success'
+              || steps.ui_tests.outcome == 'failure'
+            )
+          }}
+        shell: bash
+        run: |
+          rm -rf gh-pages/.git
+          mkdir -p gh-pages
+          
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            rm -rf "gh-pages/${{ steps.report.outputs.subfolder }}"
+          fi
 
       - name: Generate Allure report
         id: allure_report
