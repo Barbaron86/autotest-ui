@@ -158,7 +158,7 @@ jobs:
           allure_history: allure-history
           subfolder: ${{ steps.report.outputs.subfolder }}
           report_name: ${{ steps.report.outputs.name }}
-          keep_reports: 20
+          keep_reports: 10000
 
       - name: Publish Allure report to GitHub Pages
         if: >-
