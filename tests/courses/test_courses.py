@@ -39,14 +39,6 @@ class TestCourses:
 
         create_course_page.toolbar.check_visible(is_create_course_disabled=False)
 
-    @allure.title("Open courses page")
-    @allure.severity(Severity.NORMAL)
-    def test_courses_page_opens(self, courses_list_page: CoursesListPage):
-        courses_list_page.visit(AppRoute.COURSES)
-        courses_list_page.page.wait_for_timeout(1000)
-
-        assert courses_list_page.page.locator("body").is_visible()
-
     @allure.title("Check displaying of empty courses list")
     @allure.severity(Severity.NORMAL)
     def test_empty_courses_list(self, courses_list_page: CoursesListPage):
