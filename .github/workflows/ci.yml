@@ -98,9 +98,8 @@ jobs:
         id: ui_tests
         run: >
           poetry run pytest
-          tests/authentication
-          tests/courses
-          tests/dashboard
+          tests
+          --ignore=tests/pytest
           -m regression
           --alluredir=allure-results
           --clean-alluredir

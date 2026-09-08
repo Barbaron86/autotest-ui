@@ -33,7 +33,7 @@ concurrency:
 
 jobs:
   review:
-    name: AI Review PR #${{ inputs.pull-request-number }}
+    name: "AI Review PR #${{ inputs.pull-request-number }}"
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
