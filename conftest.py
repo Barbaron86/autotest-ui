@@ -5,6 +5,7 @@ from tools.logger import configure_logging
 pytest_plugins = (
     "fixtures.pages",
     "fixtures.browsers",
+    "tools.allure.logs",
 )
 
 
