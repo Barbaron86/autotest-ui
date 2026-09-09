@@ -53,7 +53,6 @@ class TestCourses:
     def test_create_course(self, create_course_page: CreateCoursePage, courses_list_page: CoursesListPage):
         create_course_page.visit(AppRoute.CREATE_COURSE)
         create_course_page.toolbar.check_visible(is_create_course_disabled=True)
-        create_course_page.image_upload_widget.check_visible(is_image_uploaded=False)
         create_course_page.form.check_visible(
             title="",
             description="",

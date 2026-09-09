@@ -58,3 +58,5 @@ class ImageUploadWidgetComponent(BaseComponent):
 
     def upload_preview_image(self, file: str | Path) -> None:
         self.upload_input.set_input_files(file)
+        self.preview_image.check_visible()
+        self.remove_button.check_visible()
