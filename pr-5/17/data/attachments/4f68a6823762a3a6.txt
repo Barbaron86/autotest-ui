@@ -1,0 +1,10 @@
+21:01:30.212 | 💡 INFO     | BASE_PAGE      | Opening the: ./#/auth/login
+21:01:31.147 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-page-registration-link" at index "0"
+21:01:31.147 | 💡 INFO     | BASE_ELEMENT   | Clicking on link "Registration"
+21:01:31.670 | 💡 INFO     | BASE_PAGE      | Checking that current url matches pattern: .*/#/auth/registration
+21:01:31.731 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-email-input" at index "0"
+21:01:31.732 | 💡 INFO     | BASE_ELEMENT   | Checking that input "Email" is visible
+21:01:31.899 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-username-input" at index "0"
+21:01:31.899 | 💡 INFO     | BASE_ELEMENT   | Checking that input "Username" is visible
+21:01:31.909 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-password-input" at index "0"
+21:01:31.909 | 💡 INFO     | BASE_ELEMENT   | Checking that input "Password" is visible

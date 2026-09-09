@@ -1,0 +1,49 @@
+21:01:49.913 | 💡 INFO     | BASE_PAGE      | Opening the: ./#/courses
+21:01:51.682 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-icon" at index "0"
+21:01:51.683 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Logout icon" is visible
+21:01:51.894 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-title-text" at index "0"
+21:01:51.895 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Logout title" is visible
+21:01:51.910 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-title-text" at index "0"
+21:01:51.910 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Logout title" has text: "Logout"
+21:01:51.924 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-button" at index "0"
+21:01:51.924 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Logout button" is visible
+21:01:51.937 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-icon" at index "0"
+21:01:51.937 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Courses icon" is visible
+21:01:51.983 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-title-text" at index "0"
+21:01:51.983 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses title" is visible
+21:01:51.999 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-title-text" at index "0"
+21:01:51.999 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses title" has text: "Courses"
+21:01:52.007 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-button" at index "0"
+21:01:52.008 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Courses button" is visible
+21:01:52.014 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-icon" at index "0"
+21:01:52.014 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Dashboard icon" is visible
+21:01:52.023 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-title-text" at index "0"
+21:01:52.023 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" is visible
+21:01:52.030 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-title-text" at index "0"
+21:01:52.030 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" has text: "Dashboard"
+21:01:52.037 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-button" at index "0"
+21:01:52.037 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Dashboard button" is visible
+21:01:52.046 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-app-title-text" at index "0"
+21:01:52.046 | 💡 INFO     | BASE_ELEMENT   | Checking that text "App title" is visible
+21:01:52.053 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-app-title-text" at index "0"
+21:01:52.053 | 💡 INFO     | BASE_ELEMENT   | Checking that text "App title" has text: "UI Course"
+21:01:52.060 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-welcome-title-text" at index "0"
+21:01:52.060 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Welcome title" is visible
+21:01:52.068 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-welcome-title-text" at index "0"
+21:01:52.068 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Welcome title" has text: "Welcome, username!"
+21:01:52.078 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-toolbar-title-text" at index "0"
+21:01:52.078 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses list title" is visible
+21:01:52.085 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-toolbar-title-text" at index "0"
+21:01:52.085 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses list title" has text: "Courses"
+21:01:52.091 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-toolbar-create-course-button" at index "0"
+21:01:52.091 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Create course button" is visible
+21:01:52.098 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-empty-view-icon" at index "0"
+21:01:52.098 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Icon" is visible
+21:01:52.104 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-empty-view-title-text" at index "0"
+21:01:52.104 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" is visible
+21:01:52.109 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-empty-view-title-text" at index "0"
+21:01:52.109 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" has text: "There is no results"
+21:01:52.114 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-empty-view-description-text" at index "0"
+21:01:52.114 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Description" is visible
+21:01:52.119 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-empty-view-description-text" at index "0"
+21:01:52.119 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Description" has text: "Results from the load test pipeline will be displayed here"
