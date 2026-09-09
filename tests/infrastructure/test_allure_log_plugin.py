@@ -11,7 +11,7 @@ import pytest
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
-@pytest.mark.regression
+@pytest.mark.infrastructure
 def test_allure_log_attachments_are_isolated() -> None:
     test_workspace = PROJECT_ROOT / f".allure-log-test-{uuid4().hex}"
     test_workspace.mkdir()
