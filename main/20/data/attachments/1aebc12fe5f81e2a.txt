@@ -1,0 +1,15 @@
+18:43:54.934 | 💡 INFO     | BASE_PAGE      | Opening the: ./#/auth/login
+18:43:56.124 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-form-email-input" at index "0"
+18:43:56.125 | 💡 INFO     | INPUT          | Filling input "Email" with value: "user.name@gmail.com"
+18:43:56.366 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-form-email-input" at index "0"
+18:43:56.366 | 💡 INFO     | INPUT          | Checking that input "Email" has value: "user.name@gmail.com"
+18:43:56.405 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-form-password-input" at index "0"
+18:43:56.405 | 💡 INFO     | INPUT          | Filling input "Password" with value: "  "
+18:43:56.476 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-form-password-input" at index "0"
+18:43:56.477 | 💡 INFO     | INPUT          | Checking that input "Password" has value: "  "
+18:43:56.484 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-page-login-button" at index "0"
+18:43:56.484 | 💡 INFO     | BASE_ELEMENT   | Clicking on button "Login"
+18:43:56.591 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-page-wrong-email-or-password-alert" at index "0"
+18:43:56.592 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Wrong email or password" is visible
+18:43:56.621 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-page-wrong-email-or-password-alert" at index "0"
+18:43:56.621 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Wrong email or password" has text: "Wrong email or password"
