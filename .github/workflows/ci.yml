@@ -115,7 +115,7 @@ jobs:
               || steps.ui_tests.outcome == 'failure'
             )
           }}
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: coverage-history.json
           key: ui-coverage-history-main-${{ github.run_id }}
@@ -144,7 +144,7 @@ jobs:
             && github.event_name == 'push'
             && github.ref == 'refs/heads/main'
           }}
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: coverage-history.json
           key: ui-coverage-history-main-${{ github.run_id }}
@@ -160,7 +160,7 @@ jobs:
         with:
           name: ui-coverage-report
           path: |
-            index.html
+            coverage.html
             coverage-report.json
           retention-days: 30
 
@@ -174,7 +174,7 @@ jobs:
               || steps.ui_tests.outcome == 'failure'
             )
           }}
-        uses: actions/checkout@v7.0.1
+        uses: actions/checkout@v6
         continue-on-error: true
         with:
           ref: gh-pages
@@ -200,7 +200,26 @@ jobs:
             rm -rf "gh-pages/${{ steps.report.outputs.subfolder }}"
           fi
           
-          echo '<meta http-equiv="refresh" content="0; url=./main/">' > gh-pages/index.html
+          cat > gh-pages/index.html <<'EOF'
+          <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <title>QA Automation Reports</title>
+          </head>
+          <body>
+            <h1>QA Automation Reports</h1>
+
+            <p>
+              <a href="./main/">Allure Report</a>
+            </p>
+
+            <p>
+              <a href="./ui-coverage/coverage.html">UI Coverage Report</a>
+            </p>
+          </body>
+          </html>
+          EOF
 
       - name: Add UI Coverage report to GitHub Pages
         if: >-
@@ -214,7 +233,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p gh-pages/ui-coverage
-          cp index.html gh-pages/ui-coverage/index.html
+          cp coverage.html gh-pages/ui-coverage/coverage.html
           cp coverage-report.json gh-pages/ui-coverage/coverage-report.json
 
       - name: Generate Allure report
@@ -283,5 +302,5 @@ jobs:
             echo
             echo "## UI Coverage"
             echo
-            echo "[Open UI Coverage report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/ui-coverage/)"
+            echo "[Open UI Coverage report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/ui-coverage/coverage.html)"
           } >> "$GITHUB_STEP_SUMMARY"

@@ -12,7 +12,7 @@ allure-report/
 tracing
 videos
 .env
-*json
+/browser_state.json
 
 #coverage
 coverage-results
