@@ -1,0 +1,1 @@
+{"config":{"apps":[{"key":"my-ui-app","url":"https://my-ui-app.com/login","name":"My UI App","tags":["UI","PRODUCTION"],"repository":"https://github.com/my-ui-app"}]},"createdAt":"2026-09-11T20:01:43.440667","appsCoverage":{"my-ui-app":{"history":[],"elements":[]}}}

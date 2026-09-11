@@ -1,0 +1,100 @@
+20:00:50.496 | 💡 INFO     | BASE_PAGE      | Opening the: ./#/auth/registration
+20:00:51.337 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-email-input" at index "0"
+20:00:51.338 | 💡 INFO     | INPUT          | Filling input "Email" with value: "emailtest@gmail.com"
+20:00:52.184 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-email-input" at index "0"
+20:00:52.184 | 💡 INFO     | INPUT          | Checking that input "Email" has value: "emailtest@gmail.com"
+20:00:52.275 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-username-input" at index "0"
+20:00:52.275 | 💡 INFO     | INPUT          | Filling input "Username" with value: "username"
+20:00:52.499 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-username-input" at index "0"
+20:00:52.499 | 💡 INFO     | INPUT          | Checking that input "Username" has value: "username"
+20:00:52.663 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-password-input" at index "0"
+20:00:52.664 | 💡 INFO     | INPUT          | Filling input "Password" with value: "password"
+20:00:52.876 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-password-input" at index "0"
+20:00:52.877 | 💡 INFO     | INPUT          | Checking that input "Password" has value: "password"
+20:00:52.964 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-page-registration-button" at index "0"
+20:00:52.965 | 💡 INFO     | BASE_ELEMENT   | Clicking on button "Registration"
+20:00:53.508 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-toolbar-title-text" at index "0"
+20:00:53.511 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" is visible
+20:00:54.312 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-toolbar-title-text" at index "0"
+20:00:54.312 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" has text: "Dashboard"
+20:00:54.336 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-app-title-text" at index "0"
+20:00:54.337 | 💡 INFO     | BASE_ELEMENT   | Checking that text "App title" is visible
+20:00:54.367 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-app-title-text" at index "0"
+20:00:54.367 | 💡 INFO     | BASE_ELEMENT   | Checking that text "App title" has text: "UI Course"
+20:00:54.411 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-welcome-title-text" at index "0"
+20:00:54.412 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Welcome title" is visible
+20:00:54.454 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-welcome-title-text" at index "0"
+20:00:54.455 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Welcome title" has text: "Welcome, username!"
+20:00:54.483 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-icon" at index "0"
+20:00:54.484 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Logout icon" is visible
+20:00:54.523 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-title-text" at index "0"
+20:00:54.523 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Logout title" is visible
+20:00:54.541 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-title-text" at index "0"
+20:00:54.542 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Logout title" has text: "Logout"
+20:00:54.559 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-button" at index "0"
+20:00:54.559 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Logout button" is visible
+20:00:54.588 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-icon" at index "0"
+20:00:54.589 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Courses icon" is visible
+20:00:54.611 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-title-text" at index "0"
+20:00:54.611 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses title" is visible
+20:00:54.635 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-title-text" at index "0"
+20:00:54.637 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses title" has text: "Courses"
+20:00:54.661 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-button" at index "0"
+20:00:54.661 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Courses button" is visible
+20:00:54.695 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-icon" at index "0"
+20:00:54.695 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Dashboard icon" is visible
+20:00:54.725 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-title-text" at index "0"
+20:00:54.725 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" is visible
+20:00:54.746 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-title-text" at index "0"
+20:00:54.746 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" has text: "Dashboard"
+20:00:54.769 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-button" at index "0"
+20:00:54.769 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Dashboard button" is visible
+20:00:54.795 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-button" at index "0"
+20:00:54.795 | 💡 INFO     | BASE_ELEMENT   | Clicking on button "Logout button"
+20:01:05.157 | 💡 INFO     | BASE_COMPONENT | Checking that current url matches pattern: .*/#/auth/login
+20:01:05.263 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-form-email-input" at index "0"
+20:01:05.264 | 💡 INFO     | INPUT          | Filling input "Email" with value: "emailtest@gmail.com"
+20:01:05.606 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-form-email-input" at index "0"
+20:01:05.606 | 💡 INFO     | INPUT          | Checking that input "Email" has value: "emailtest@gmail.com"
+20:01:05.667 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-form-password-input" at index "0"
+20:01:05.667 | 💡 INFO     | INPUT          | Filling input "Password" with value: "password"
+20:01:05.780 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-form-password-input" at index "0"
+20:01:05.780 | 💡 INFO     | INPUT          | Checking that input "Password" has value: "password"
+20:01:05.907 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: login-page-login-button" at index "0"
+20:01:05.907 | 💡 INFO     | BASE_ELEMENT   | Clicking on button "Login"
+20:01:06.406 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-toolbar-title-text" at index "0"
+20:01:06.407 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" is visible
+20:01:06.437 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-toolbar-title-text" at index "0"
+20:01:06.438 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" has text: "Dashboard"
+20:01:06.470 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-app-title-text" at index "0"
+20:01:06.471 | 💡 INFO     | BASE_ELEMENT   | Checking that text "App title" is visible
+20:01:06.505 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-app-title-text" at index "0"
+20:01:06.506 | 💡 INFO     | BASE_ELEMENT   | Checking that text "App title" has text: "UI Course"
+20:01:06.540 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-welcome-title-text" at index "0"
+20:01:06.543 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Welcome title" is visible
+20:01:06.590 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-welcome-title-text" at index "0"
+20:01:06.591 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Welcome title" has text: "Welcome, username!"
+20:01:06.613 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-icon" at index "0"
+20:01:06.614 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Logout icon" is visible
+20:01:06.638 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-title-text" at index "0"
+20:01:06.638 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Logout title" is visible
+20:01:06.664 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-title-text" at index "0"
+20:01:06.664 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Logout title" has text: "Logout"
+20:01:06.693 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-button" at index "0"
+20:01:06.693 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Logout button" is visible
+20:01:06.714 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-icon" at index "0"
+20:01:06.715 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Courses icon" is visible
+20:01:06.744 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-title-text" at index "0"
+20:01:06.744 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses title" is visible
+20:01:06.766 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-title-text" at index "0"
+20:01:06.766 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses title" has text: "Courses"
+20:01:06.789 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-button" at index "0"
+20:01:06.789 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Courses button" is visible
+20:01:06.818 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-icon" at index "0"
+20:01:06.818 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Dashboard icon" is visible
+20:01:06.847 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-title-text" at index "0"
+20:01:06.847 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" is visible
+20:01:06.866 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-title-text" at index "0"
+20:01:06.867 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" has text: "Dashboard"
+20:01:06.894 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-button" at index "0"
+20:01:06.894 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Dashboard button" is visible
