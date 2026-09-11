@@ -28,11 +28,10 @@ jobs:
 
     env:
       HEADLESS: "true"
-      BROWSERS: '["chromium", "firefox", "webkit"]'
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v7.0.1
+        uses: actions/checkout@v6
         with:
           persist-credentials: false
 
@@ -69,7 +68,7 @@ jobs:
           else
             echo "subfolder=main" >> "$GITHUB_OUTPUT"
             echo "name=UI tests main" >> "$GITHUB_OUTPUT"
-            echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"
+            echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/main/" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Check formatting with Ruff
@@ -91,9 +90,6 @@ jobs:
           firefox
           webkit
 
-      - name: Prepare Allure results directory
-        run: mkdir -p allure-results
-
       - name: Run regression UI tests
         id: ui_tests
         run: >
@@ -106,15 +102,7 @@ jobs:
           --clean-alluredir
 
       - name: Restore UI Coverage history
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && (
-              steps.ui_tests.outcome == 'success'
-              || steps.ui_tests.outcome == 'failure'
-            )
-          }}
+        if: ${{ !cancelled() && steps.ui_tests.outcome == 'success' }}
         uses: actions/cache/restore@v6
         with:
           path: coverage-history.json
@@ -124,38 +112,18 @@ jobs:
 
       - name: Generate UI Coverage report
         id: coverage_report
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && (
-              steps.ui_tests.outcome == 'success'
-              || steps.ui_tests.outcome == 'failure'
-            )
-          }}
+        if: ${{ !cancelled() && steps.ui_tests.outcome == 'success' }}
         run: poetry run ui-coverage-tool save-report
 
       - name: Save UI Coverage history
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && steps.coverage_report.outcome == 'success'
-            && github.event_name == 'push'
-            && github.ref == 'refs/heads/main'
-          }}
+        if: ${{ !cancelled() && steps.coverage_report.outcome == 'success' && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         uses: actions/cache/save@v6
         with:
           path: coverage-history.json
           key: ui-coverage-history-main-${{ github.run_id }}
 
       - name: Upload UI Coverage report
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && steps.coverage_report.outcome == 'success'
-          }}
+        if: ${{ !cancelled() && steps.coverage_report.outcome == 'success' }}
         uses: actions/upload-artifact@v7
         with:
           name: ui-coverage-report
@@ -165,15 +133,7 @@ jobs:
           retention-days: 30
 
       - name: Get Allure history
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && (
-              steps.ui_tests.outcome == 'success'
-              || steps.ui_tests.outcome == 'failure'
-            )
-          }}
+        if: ${{ !cancelled() && steps.ui_tests.outcome != 'skipped' }}
         uses: actions/checkout@v6
         continue-on-error: true
         with:
@@ -182,54 +142,18 @@ jobs:
           persist-credentials: false
 
       - name: Prepare Allure history
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && (
-              steps.ui_tests.outcome == 'success'
-              || steps.ui_tests.outcome == 'failure'
-            )
-          }}
+        if: ${{ !cancelled() && steps.ui_tests.outcome != 'skipped' }}
         shell: bash
         run: |
           rm -rf gh-pages/.git
           mkdir -p gh-pages
-          
           if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
             rm -rf "gh-pages/${{ steps.report.outputs.subfolder }}"
           fi
-          
-          cat > gh-pages/index.html <<'EOF'
-          <!doctype html>
-          <html lang="en">
-          <head>
-            <meta charset="utf-8">
-            <title>QA Automation Reports</title>
-          </head>
-          <body>
-            <h1>QA Automation Reports</h1>
-
-            <p>
-              <a href="./main/">Allure Report</a>
-            </p>
-
-            <p>
-              <a href="./ui-coverage/coverage.html">UI Coverage Report</a>
-            </p>
-          </body>
-          </html>
-          EOF
+          echo '<meta http-equiv="refresh" content="0; url=./main/">' > gh-pages/index.html
 
       - name: Add UI Coverage report to GitHub Pages
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && steps.coverage_report.outcome == 'success'
-            && github.event_name == 'push'
-            && github.ref == 'refs/heads/main'
-          }}
+        if: ${{ !cancelled() && steps.coverage_report.outcome == 'success' && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         shell: bash
         run: |
           mkdir -p gh-pages/ui-coverage
@@ -238,15 +162,7 @@ jobs:
 
       - name: Generate Allure report
         id: allure_report
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && (
-              steps.ui_tests.outcome == 'success'
-              || steps.ui_tests.outcome == 'failure'
-            )
-          }}
+        if: ${{ !cancelled() && steps.ui_tests.outcome != 'skipped' }}
         uses: simple-elf/allure-report-action@v1.15
         with:
           allure_results: allure-results
@@ -257,50 +173,28 @@ jobs:
           report_name: ${{ steps.report.outputs.name }}
           keep_reports: 100
 
-
       - name: Publish reports to GitHub Pages
         id: publish_report
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && steps.allure_report.outcome == 'success'
-          }}
+        if: ${{ !cancelled() && steps.allure_report.outcome == 'success' }}
         uses: peaceiris/actions-gh-pages@v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
 
-      - name: Add Allure report link to workflow summary
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && steps.publish_report.outcome == 'success'
-          }}
+      - name: Add report links to workflow summary
+        if: ${{ !cancelled() && steps.publish_report.outcome == 'success' }}
         shell: bash
         run: |
           {
             echo "## Allure report"
             echo
             echo "[Open ${{ steps.report.outputs.name }}](${{ steps.report.outputs.url }})"
-          } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Add UI Coverage report link to workflow summary
-        if: >-
-          ${{
-            always()
-            && !cancelled()
-            && steps.publish_report.outcome == 'success'
-            && github.event_name == 'push'
-            && github.ref == 'refs/heads/main'
-          }}
-        shell: bash
-        run: |
-          {
-            echo
-            echo "## UI Coverage"
-            echo
-            echo "[Open UI Coverage report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/ui-coverage/coverage.html)"
+            if [[ "$GITHUB_EVENT_NAME" == "push" && "$GITHUB_REF" == "refs/heads/main" ]]; then
+              echo
+              echo "## UI Coverage"
+              echo
+              echo "[Open UI Coverage report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/ui-coverage/coverage.html)"
+            fi
           } >> "$GITHUB_STEP_SUMMARY"
