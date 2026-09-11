@@ -105,6 +105,65 @@ jobs:
           --alluredir=allure-results
           --clean-alluredir
 
+      - name: Restore UI Coverage history
+        if: >-
+          ${{
+            always()
+            && !cancelled()
+            && (
+              steps.ui_tests.outcome == 'success'
+              || steps.ui_tests.outcome == 'failure'
+            )
+          }}
+        uses: actions/cache/restore@v4
+        with:
+          path: coverage-history.json
+          key: ui-coverage-history-main-${{ github.run_id }}
+          restore-keys: |
+            ui-coverage-history-main-
+
+      - name: Generate UI Coverage report
+        id: coverage_report
+        if: >-
+          ${{
+            always()
+            && !cancelled()
+            && (
+              steps.ui_tests.outcome == 'success'
+              || steps.ui_tests.outcome == 'failure'
+            )
+          }}
+        run: poetry run ui-coverage-tool save-report
+
+      - name: Save UI Coverage history
+        if: >-
+          ${{
+            always()
+            && !cancelled()
+            && steps.coverage_report.outcome == 'success'
+            && github.event_name == 'push'
+            && github.ref == 'refs/heads/main'
+          }}
+        uses: actions/cache/save@v4
+        with:
+          path: coverage-history.json
+          key: ui-coverage-history-main-${{ github.run_id }}
+
+      - name: Upload UI Coverage report
+        if: >-
+          ${{
+            always()
+            && !cancelled()
+            && steps.coverage_report.outcome == 'success'
+          }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: ui-coverage-report
+          path: |
+            index.html
+            coverage-report.json
+          retention-days: 30
+
       - name: Get Allure history
         if: >-
           ${{
@@ -143,6 +202,21 @@ jobs:
           
           echo '<meta http-equiv="refresh" content="0; url=./main/">' > gh-pages/index.html
 
+      - name: Add UI Coverage report to GitHub Pages
+        if: >-
+          ${{
+            always()
+            && !cancelled()
+            && steps.coverage_report.outcome == 'success'
+            && github.event_name == 'push'
+            && github.ref == 'refs/heads/main'
+          }}
+        shell: bash
+        run: |
+          mkdir -p gh-pages/ui-coverage
+          cp index.html gh-pages/ui-coverage/index.html
+          cp coverage-report.json gh-pages/ui-coverage/coverage-report.json
+
       - name: Generate Allure report
         id: allure_report
         if: >-
@@ -165,7 +239,7 @@ jobs:
           keep_reports: 100
 
 
-      - name: Publish Allure report to GitHub Pages
+      - name: Publish reports to GitHub Pages
         id: publish_report
         if: >-
           ${{
@@ -192,4 +266,22 @@ jobs:
             echo "## Allure report"
             echo
             echo "[Open ${{ steps.report.outputs.name }}](${{ steps.report.outputs.url }})"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Add UI Coverage report link to workflow summary
+        if: >-
+          ${{
+            always()
+            && !cancelled()
+            && steps.publish_report.outcome == 'success'
+            && github.event_name == 'push'
+            && github.ref == 'refs/heads/main'
+          }}
+        shell: bash
+        run: |
+          {
+            echo
+            echo "## UI Coverage"
+            echo
+            echo "[Open UI Coverage report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/ui-coverage/)"
           } >> "$GITHUB_STEP_SUMMARY"
