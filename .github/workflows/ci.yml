@@ -148,6 +148,8 @@ jobs:
           mkdir -p gh-pages
           if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
             rm -rf "gh-pages/${{ steps.report.outputs.subfolder }}"
+          else
+            rm -rf "gh-pages/${{ steps.report.outputs.subfolder }}/${{ github.run_number }}"
           fi
           echo '<meta http-equiv="refresh" content="0; url=./main/">' > gh-pages/index.html
 
