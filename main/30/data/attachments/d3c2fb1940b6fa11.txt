@@ -1,0 +1,61 @@
+00:43:42.576 | 💡 INFO     | BASE_PAGE      | Opening the: ./#/dashboard
+00:43:43.330 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-icon" at index "0"
+00:43:43.331 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Logout icon" is visible
+00:43:44.177 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-title-text" at index "0"
+00:43:44.177 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Logout title" is visible
+00:43:44.205 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-title-text" at index "0"
+00:43:44.205 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Logout title" has text: "Logout"
+00:43:44.237 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: logout-drawer-list-item-button" at index "0"
+00:43:44.237 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Logout button" is visible
+00:43:44.266 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-icon" at index "0"
+00:43:44.266 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Courses icon" is visible
+00:43:44.305 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-title-text" at index "0"
+00:43:44.305 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses title" is visible
+00:43:44.347 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-title-text" at index "0"
+00:43:44.351 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses title" has text: "Courses"
+00:43:44.382 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-drawer-list-item-button" at index "0"
+00:43:44.383 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Courses button" is visible
+00:43:44.410 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-icon" at index "0"
+00:43:44.410 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Dashboard icon" is visible
+00:43:44.438 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-title-text" at index "0"
+00:43:44.438 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" is visible
+00:43:44.458 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-title-text" at index "0"
+00:43:44.458 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" has text: "Dashboard"
+00:43:44.479 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-drawer-list-item-button" at index "0"
+00:43:44.479 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Dashboard button" is visible
+00:43:44.515 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-app-title-text" at index "0"
+00:43:44.515 | 💡 INFO     | BASE_ELEMENT   | Checking that text "App title" is visible
+00:43:44.548 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-app-title-text" at index "0"
+00:43:44.549 | 💡 INFO     | BASE_ELEMENT   | Checking that text "App title" has text: "UI Course"
+00:43:44.603 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-welcome-title-text" at index "0"
+00:43:44.603 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Welcome title" is visible
+00:43:44.645 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: navigation-navbar-welcome-title-text" at index "0"
+00:43:44.645 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Welcome title" has text: "Welcome, username!"
+00:43:44.681 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-toolbar-title-text" at index "0"
+00:43:44.682 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" is visible
+00:43:44.715 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: dashboard-toolbar-title-text" at index "0"
+00:43:44.715 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Dashboard title" has text: "Dashboard"
+00:43:44.737 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-widget-title-text" at index "0"
+00:43:44.737 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" is visible
+00:43:44.759 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-widget-title-text" at index "0"
+00:43:44.760 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" has text: "Courses"
+00:43:44.782 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-pie-chart" at index "0"
+00:43:44.782 | 💡 INFO     | BASE_ELEMENT   | Checking that image "Chart" is visible
+00:43:44.804 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: scores-widget-title-text" at index "0"
+00:43:44.805 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" is visible
+00:43:44.827 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: scores-widget-title-text" at index "0"
+00:43:44.827 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" has text: "Scores"
+00:43:44.855 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: scores-scatter-chart" at index "0"
+00:43:44.855 | 💡 INFO     | BASE_ELEMENT   | Checking that image "Chart" is visible
+00:43:44.875 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: activities-widget-title-text" at index "0"
+00:43:44.875 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" is visible
+00:43:44.888 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: activities-widget-title-text" at index "0"
+00:43:44.888 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" has text: "Activities"
+00:43:44.904 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: activities-line-chart" at index "0"
+00:43:44.904 | 💡 INFO     | BASE_ELEMENT   | Checking that image "Chart" is visible
+00:43:44.918 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: students-widget-title-text" at index "0"
+00:43:44.918 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" is visible
+00:43:44.928 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: students-widget-title-text" at index "0"
+00:43:44.929 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" has text: "Students"
+00:43:44.938 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: students-bar-chart" at index "0"
+00:43:44.938 | 💡 INFO     | BASE_ELEMENT   | Checking that image "Chart" is visible
