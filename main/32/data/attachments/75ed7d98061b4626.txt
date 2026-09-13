@@ -1,0 +1,113 @@
+01:52:52.043 | 💡 INFO     | BASE_PAGE      | Opening the: ./#/courses/create
+01:52:53.803 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-title-text" at index "0"
+01:52:53.804 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Create course title" is visible
+01:52:54.110 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-title-text" at index "0"
+01:52:54.110 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Create course title" has text: "Create course"
+01:52:54.176 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-create-course-button" at index "0"
+01:52:54.176 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Create course" is visible
+01:52:54.248 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-create-course-button" at index "0"
+01:52:54.248 | 💡 INFO     | BUTTON         | Checking that button "Create course" is disabled
+01:52:54.291 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-title-input" at index "0"
+01:52:54.291 | 💡 INFO     | BASE_ELEMENT   | Checking that input "Title" is visible
+01:52:54.332 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-title-input" at index "0"
+01:52:54.332 | 💡 INFO     | INPUT          | Checking that input "Title" has value: ""
+01:52:54.368 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-estimated-time-input" at index "0"
+01:52:54.368 | 💡 INFO     | BASE_ELEMENT   | Checking that input "Estimated time" is visible
+01:52:54.399 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-estimated-time-input" at index "0"
+01:52:54.399 | 💡 INFO     | INPUT          | Checking that input "Estimated time" has value: ""
+01:52:54.422 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-description-input" at index "0"
+01:52:54.422 | 💡 INFO     | BASE_ELEMENT   | Checking that textarea "Description" is visible
+01:52:54.459 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-description-input" at index "0"
+01:52:54.459 | 💡 INFO     | TEXTAREA       | Checking that textarea "Description" has value: ""
+01:52:54.479 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-max-score-input" at index "0"
+01:52:54.479 | 💡 INFO     | BASE_ELEMENT   | Checking that input "Max score" is visible
+01:52:54.510 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-max-score-input" at index "0"
+01:52:54.510 | 💡 INFO     | INPUT          | Checking that input "Max score" has value: "0"
+01:52:54.541 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-min-score-input" at index "0"
+01:52:54.542 | 💡 INFO     | BASE_ELEMENT   | Checking that input "Min score" is visible
+01:52:54.578 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-min-score-input" at index "0"
+01:52:54.578 | 💡 INFO     | INPUT          | Checking that input "Min score" has value: "0"
+01:52:54.606 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-exercises-box-toolbar-title-text" at index "0"
+01:52:54.607 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Exercises title" is visible
+01:52:54.635 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-exercises-box-toolbar-title-text" at index "0"
+01:52:54.635 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Exercises title" has text: "Exercises"
+01:52:54.678 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-exercises-box-toolbar-create-exercise-button" at index "0"
+01:52:54.678 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Create exercise" is visible
+01:52:54.716 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-exercises-empty-view-icon" at index "0"
+01:52:54.716 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Icon" is visible
+01:52:54.990 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-exercises-empty-view-title-text" at index "0"
+01:52:54.993 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" is visible
+01:52:55.031 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-exercises-empty-view-title-text" at index "0"
+01:52:55.031 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" has text: "There is no exercises"
+01:52:55.060 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-exercises-empty-view-description-text" at index "0"
+01:52:55.061 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Description" is visible
+01:52:55.089 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-exercises-empty-view-description-text" at index "0"
+01:52:55.090 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Description" has text: "Click on "Create exercise" button to create new exercise"
+01:52:55.119 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-input" at index "0"
+01:52:55.119 | 💡 INFO     | FILE_INPUT     | Setting input "testdata/files/image.png" for file input "Image upload input"
+01:52:55.203 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-preview-image" at index "0"
+01:52:55.203 | 💡 INFO     | BASE_ELEMENT   | Checking that image "Preview image" is visible
+01:52:55.316 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-remove-button" at index "0"
+01:52:55.316 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Remove image" is visible
+01:52:55.345 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-info-icon" at index "0"
+01:52:55.345 | 💡 INFO     | BASE_ELEMENT   | Checking that icon "Image upload info icon" is visible
+01:52:55.362 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-info-title-text" at index "0"
+01:52:55.364 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Image upload info title" is visible
+01:52:55.386 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-info-title-text" at index "0"
+01:52:55.386 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Image upload info title" has text: "Tap on "Upload image" button to select file"
+01:52:55.418 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-info-description-text" at index "0"
+01:52:55.418 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Image upload info description" is visible
+01:52:55.450 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-info-description-text" at index "0"
+01:52:55.450 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Image upload info description" has text: "Recommended file size 540X300"
+01:52:55.477 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-upload-button" at index "0"
+01:52:55.477 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Upload image" is visible
+01:52:55.500 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-remove-button" at index "0"
+01:52:55.500 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Remove image" is visible
+01:52:55.513 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-preview-image" at index "0"
+01:52:55.513 | 💡 INFO     | BASE_ELEMENT   | Checking that image "Preview image" is visible
+01:52:55.556 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-title-input" at index "0"
+01:52:55.556 | 💡 INFO     | INPUT          | Filling input "Title" with value: "Playwright"
+01:52:55.660 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-title-input" at index "0"
+01:52:55.661 | 💡 INFO     | INPUT          | Checking that input "Title" has value: "Playwright"
+01:52:55.732 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-estimated-time-input" at index "0"
+01:52:55.732 | 💡 INFO     | INPUT          | Filling input "Estimated time" with value: "2 weeks"
+01:52:55.844 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-estimated-time-input" at index "0"
+01:52:55.844 | 💡 INFO     | INPUT          | Checking that input "Estimated time" has value: "2 weeks"
+01:52:55.903 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-description-input" at index "0"
+01:52:55.903 | 💡 INFO     | TEXTAREA       | Filling textarea "Description" with value: "Playwright"
+01:52:55.995 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-description-input" at index "0"
+01:52:55.995 | 💡 INFO     | TEXTAREA       | Checking that textarea "Description" has value: "Playwright"
+01:52:56.016 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-max-score-input" at index "0"
+01:52:56.017 | 💡 INFO     | INPUT          | Filling input "Max score" with value: "100"
+01:52:56.107 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-max-score-input" at index "0"
+01:52:56.108 | 💡 INFO     | INPUT          | Checking that input "Max score" has value: "100"
+01:52:56.134 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-min-score-input" at index "0"
+01:52:56.134 | 💡 INFO     | INPUT          | Filling input "Min score" with value: "10"
+01:52:56.265 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-min-score-input" at index "0"
+01:52:56.267 | 💡 INFO     | INPUT          | Checking that input "Min score" has value: "10"
+01:52:56.300 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-create-course-button" at index "0"
+01:52:56.300 | 💡 INFO     | BASE_ELEMENT   | Clicking on button "Create course"
+01:52:56.563 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-toolbar-title-text" at index "0"
+01:52:56.563 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses list title" is visible
+01:52:56.603 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-toolbar-title-text" at index "0"
+01:52:56.604 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Courses list title" has text: "Courses"
+01:52:56.625 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: courses-list-toolbar-create-course-button" at index "0"
+01:52:56.625 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Create course button" is visible
+01:52:56.643 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: course-preview-image" at index "0"
+01:52:56.644 | 💡 INFO     | BASE_ELEMENT   | Checking that image "Preview" is visible
+01:52:56.683 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: course-widget-title-text" at index "0"
+01:52:56.684 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" is visible
+01:52:56.714 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: course-widget-title-text" at index "0"
+01:52:56.714 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Title" has text: "Playwright"
+01:52:56.745 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: course-max-score-info-row-view-text" at index "0"
+01:52:56.745 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Max score" is visible
+01:52:56.767 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: course-max-score-info-row-view-text" at index "0"
+01:52:56.767 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Max score" has text: "Max score: 100"
+01:52:56.794 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: course-min-score-info-row-view-text" at index "0"
+01:52:56.794 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Min score" is visible
+01:52:56.814 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: course-min-score-info-row-view-text" at index "0"
+01:52:56.814 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Min score" has text: "Min score: 10"
+01:52:56.841 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: course-estimated-time-info-row-view-text" at index "0"
+01:52:56.841 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Estimated time" is visible
+01:52:56.865 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: course-estimated-time-info-row-view-text" at index "0"
+01:52:56.865 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Estimated time" has text: "Estimated time: 2 weeks"
