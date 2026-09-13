@@ -1,15 +1,14 @@
 from collections.abc import Iterator
-from pathlib import Path
 
 import allure
-from playwright.sync_api import Page, Playwright
+from playwright.sync_api import Page, Playwright, StorageState
 
 from config import Browser, settings
 from tools.playwright.mocks import mock_static_resources
 
 
 def initialize_playwright_page(
-    playwright: Playwright, test_name: str, browser_type: Browser, storage_state: Path | None = None
+    playwright: Playwright, test_name: str, browser_type: Browser, storage_state: StorageState | None = None
 ) -> Iterator[Page]:
     browser = playwright[browser_type].launch(headless=settings.headless)
     context = browser.new_context(

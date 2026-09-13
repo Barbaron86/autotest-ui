@@ -2,7 +2,7 @@ import re
 from collections.abc import Iterator
 
 import pytest
-from playwright.sync_api import Page, Playwright
+from playwright.sync_api import Page, Playwright, StorageState
 from pytest import FixtureRequest
 
 from config import settings
@@ -19,7 +19,7 @@ def page(request: FixtureRequest, playwright: Playwright) -> Iterator[Page]:
 
 
 @pytest.fixture(scope="session")
-def initialize_browser_state(playwright: Playwright):
+def browser_state(playwright: Playwright) -> StorageState:
     browser = playwright.chromium.launch(headless=settings.headless)
     context = browser.new_context(base_url=settings.get_base_url())
     page = context.new_page()
@@ -33,16 +33,18 @@ def initialize_browser_state(playwright: Playwright):
 
     registration_page.check_current_url(re.compile(".*/#/dashboard"))
 
-    context.storage_state(path=settings.browser_state_file)
+    storage_state = context.storage_state()
     context.close()
     browser.close()
 
+    return storage_state
+
 
 @pytest.fixture(params=settings.browsers)
-def page_with_state(request: FixtureRequest, initialize_browser_state, playwright: Playwright) -> Iterator[Page]:
+def page_with_state(request: FixtureRequest, browser_state: StorageState, playwright: Playwright) -> Iterator[Page]:
     yield from initialize_playwright_page(
         playwright=playwright,
         test_name=request.node.name,
-        storage_state=settings.browser_state_file,
+        storage_state=browser_state,
         browser_type=request.param,
     )
