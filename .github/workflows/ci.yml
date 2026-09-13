@@ -95,7 +95,6 @@ jobs:
         run: >
           poetry run pytest
           tests
-          --ignore=tests/pytest
           --numprocesses auto
           -m regression
           --alluredir=allure-results
