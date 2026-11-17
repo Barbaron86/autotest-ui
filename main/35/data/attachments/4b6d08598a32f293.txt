@@ -1,0 +1,59 @@
+17:22:48.058 | 💡 INFO     | BASE_PAGE      | Opening the: ./#/auth/registration
+17:22:48.716 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-email-input" at index "0"
+17:22:48.716 | 💡 INFO     | INPUT          | Filling input "Email" with value: "emailtest@gmail.com"
+17:22:48.852 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-email-input" at index "0"
+17:22:48.852 | 💡 INFO     | INPUT          | Checking that input "Email" has value: "emailtest@gmail.com"
+17:22:48.862 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-username-input" at index "0"
+17:22:48.862 | 💡 INFO     | INPUT          | Filling input "Username" with value: "username"
+17:22:48.908 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-username-input" at index "0"
+17:22:48.910 | 💡 INFO     | INPUT          | Checking that input "Username" has value: "username"
+17:22:48.914 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-password-input" at index "0"
+17:22:48.914 | 💡 INFO     | INPUT          | Filling input "Password" with value: "password"
+17:22:48.971 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-form-password-input" at index "0"
+17:22:48.971 | 💡 INFO     | INPUT          | Checking that input "Password" has value: "password"
+17:22:48.983 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: registration-page-registration-button" at index "0"
+17:22:48.984 | 💡 INFO     | BASE_ELEMENT   | Clicking on button "Registration"
+17:22:49.117 | 💡 INFO     | BASE_PAGE      | Checking that current url matches pattern: .*/#/dashboard
+17:22:53.274 | 💡 INFO     | BASE_PAGE      | Opening the: ./#/courses/create
+17:22:54.836 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-title-text" at index "0"
+17:22:54.837 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Create course title" is visible
+17:22:54.973 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-title-text" at index "0"
+17:22:54.973 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Create course title" has text: "Create course"
+17:22:55.020 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-create-course-button" at index "0"
+17:22:55.020 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Create course" is visible
+17:22:55.036 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-create-course-button" at index "0"
+17:22:55.036 | 💡 INFO     | BUTTON         | Checking that button "Create course" is disabled
+17:22:55.068 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-input" at index "0"
+17:22:55.068 | 💡 INFO     | FILE_INPUT     | Setting input "testdata/files/image.png" for file input "Image upload input"
+17:22:55.201 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-preview-image" at index "0"
+17:22:55.201 | 💡 INFO     | BASE_ELEMENT   | Checking that image "Preview image" is visible
+17:22:55.264 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-preview-image-upload-widget-remove-button" at index "0"
+17:22:55.265 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Remove image" is visible
+17:22:55.297 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-title-input" at index "0"
+17:22:55.300 | 💡 INFO     | INPUT          | Filling input "Title" with value: "Python UI Automation"
+17:22:55.429 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-title-input" at index "0"
+17:22:55.430 | 💡 INFO     | INPUT          | Checking that input "Title" has value: "Python UI Automation"
+17:22:55.504 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-estimated-time-input" at index "0"
+17:22:55.504 | 💡 INFO     | INPUT          | Filling input "Estimated time" with value: "4 weeks"
+17:22:55.622 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-estimated-time-input" at index "0"
+17:22:55.622 | 💡 INFO     | INPUT          | Checking that input "Estimated time" has value: "4 weeks"
+17:22:55.687 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-description-input" at index "0"
+17:22:55.688 | 💡 INFO     | TEXTAREA       | Filling textarea "Description" with value: "Playwright course"
+17:22:55.856 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-description-input" at index "0"
+17:22:55.856 | 💡 INFO     | TEXTAREA       | Checking that textarea "Description" has value: "Playwright course"
+17:22:55.903 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-max-score-input" at index "0"
+17:22:55.904 | 💡 INFO     | INPUT          | Filling input "Max score" with value: "100"
+17:22:55.998 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-max-score-input" at index "0"
+17:22:55.998 | 💡 INFO     | INPUT          | Checking that input "Max score" has value: "100"
+17:22:56.048 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-min-score-input" at index "0"
+17:22:56.048 | 💡 INFO     | INPUT          | Filling input "Min score" with value: "10"
+17:22:56.154 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-form-min-score-input" at index "0"
+17:22:56.154 | 💡 INFO     | INPUT          | Checking that input "Min score" has value: "10"
+17:22:56.187 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-title-text" at index "0"
+17:22:56.191 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Create course title" is visible
+17:22:56.222 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-title-text" at index "0"
+17:22:56.222 | 💡 INFO     | BASE_ELEMENT   | Checking that text "Create course title" has text: "Create course"
+17:22:56.242 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-create-course-button" at index "0"
+17:22:56.244 | 💡 INFO     | BASE_ELEMENT   | Checking that button "Create course" is visible
+17:22:56.274 | 🐛 DEBUG    | BASE_ELEMENT   | Getting locator with "data-testid: create-course-toolbar-create-course-button" at index "0"
+17:22:56.274 | 💡 INFO     | BUTTON         | Checking that button "Create course" is enabled
